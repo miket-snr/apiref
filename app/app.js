@@ -1,11 +1,11 @@
 (function () {
     'use strict';
 
-    angular.module('templateApp', ['ui.bootstrap',
+    angular.module('templateApp', ['ui.bootstrap','ngGrid',
         'ngStorage',
         'ngRoute',
-        'angular-loading-bar',
-        'ngGrid'
+        'angular-loading-bar'
+        
     ])
         .constant('urls', {
             BASE: 'https://apps.bidvestfm.co.za/FM2GO/Telkom',
