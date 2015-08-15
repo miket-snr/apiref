@@ -1,0 +1,37 @@
+<div class="row">
+<form role="form">
+  <div class="form-group">
+    <h3> <span class="label label-success">Step 1:</span>
+        <span> &nbsp; </span><span class="label label-primary">Select an Example</span></h3>
+ <select class="form-control" ng-init="selected = values[0].subItem" ng-options="item.subItem as item.label for item in values" ng-model="selected"></select>  
+      <h3> <span class="label label-success">Step 2:</span>
+        <span> &nbsp; </span> <span class="label label-primary">Modify the Parameter String Generated</span></h3>
+  <input class="form-control" id="inputdefault" type="text" ng-model="selected.name">
+      
+  </div>
+ <div>  
+ <h3>  <span class="label label-success">Step 3:</span>
+     <span> &nbsp; </span> 
+     <button type="button" class="btn btn-danger" ng-click="getdata('self')" >Now Click here to Get Data</button>   </h3> </div>
+    </form>
+</div>
+
+
+</div>
+<hr/>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Object Returned - Fields and value of first record
+            </div>
+            <div class="panel-body" data-ng-hide="data">
+                <div class="gridStyle" ng-grid="gridOptions"></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+
+
+

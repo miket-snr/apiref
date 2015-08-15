@@ -1,0 +1,20 @@
+   <div class="container">
+        {{ myTitle }} 
+       <br/>
+              
+              <input type="text" ng-model="searchBox" placeholder="start typing" />
+          
+          <br/>
+       <h1>Under Construction</h1>
+        <div class="pre-scrollable">
+            <a ng-href="#/refdata" class="list-group-item" ng-repeat="node in nodeData | filter:searchBox">
+            <h4 class="list-group-item-heading">{{node.NodeKey + ' - ' +  node.NodeCode}}</h4>
+               <p class="list-group-item-text">example call {{node.searchfield}}</p>
+            </a> 
+          </div>  
+ 
+            <br/>
+  </div>
+
+
+ 

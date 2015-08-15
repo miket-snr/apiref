@@ -1,0 +1,64 @@
+
+<div class="jumbotron" >
+        <h2>BidvestFM API Help</h2>
+        <p >We have Defined a Common set of API's for remote usage - this is a starter to help you understand what is available.</p>
+        <p data-ng-hide="token">A Login is required - so no room for Chancers here!</p>
+   </div> 
+ 
+    <div class="row" data-ng-show="token">
+
+            <div class="col-md-4">
+                <h2>API Listing</h2>
+                <p>This is a list of API's and links to details</p>
+                <br/>   
+                <p><a class="btn btn-success" href="#/refData">API Listing&raquo;</a></p>
+            </div>
+    <div class="col-md-4">
+        <h2>Registering</h2>
+        <p> Info to explain how the login Process works</p>
+        <br/>
+        <p><a class="btn btn-danger" href="#/regprocess">User Registration  &raquo;</a></p>
+    </div>
+            <div class="col-md-4">
+                <h2>Applications List</h2>
+               <p> A List of Current Applications using the API 's </p>
+                <br/>
+                <p><a class="btn btn-primary" href="#/applist">View Application Examples &raquo;</a></p>
+            </div>
+
+ </div>
+
+<div class="row" data-ng-hide="token">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <strong>Sign in</strong>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" ng-submit="signin()">
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">Email</label>
+
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="Email" ng-model="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-2 control-label">Password</label>
+
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" placeholder="Password"
+                                   ng-model="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary pull-right">Sign in</button>
+                        </div>
+                    </div>
+                    <p data-ng-show="error" class="error">{{ error }}</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
